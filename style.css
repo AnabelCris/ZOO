@@ -6,13 +6,13 @@ body{
   min-width:1280px;
 }
 
-/* CONTENEDOR GENERAL (alineación SRS 1280px) */
+/* CONTENEDOR BASE */
 .container{
   width:1280px;
   margin:0 auto;
 }
 
-/* NAV (RF-11 sticky mejorado) */
+/* ================= NAV (RF-11) ================= */
 nav{
   position:sticky;
   top:0;
@@ -22,7 +22,7 @@ nav{
   justify-content:space-between;
   align-items:center;
   padding:12px 40px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.4);
+  box-shadow:0 2px 10px rgba(0,0,0,0.5);
 }
 
 nav h1{
@@ -35,7 +35,7 @@ nav h1{
 nav ul{
   list-style:none;
   display:flex;
-  gap:20px;
+  gap:18px;
   margin:0;
   padding:0;
 }
@@ -51,30 +51,28 @@ nav ul li a:hover{
   color:#F9A825;
 }
 
-/* SECCIONES */
+/* ================= SECCIONES ================= */
 section{
   padding:70px 80px;
 }
 
-/* INICIO (RF-01 mejorado visualmente) */
 #inicio{
   background:#1B5E20;
   text-align:center;
-  padding:140px 80px;
+  padding:160px 80px;
 }
 
 #inicio h1{
-  font-size:48px;
+  font-size:52px;
   color:#F9A825;
   margin-bottom:10px;
 }
 
 #inicio p{
-  font-size:18px;
+  font-size:20px;
   opacity:0.9;
 }
 
-/* BOTONES (CTA RF-12) */
 button{
   background:#F9A825;
   border:none;
@@ -83,6 +81,7 @@ button{
   cursor:pointer;
   border-radius:4px;
   transition:0.3s;
+  margin-top:10px;
 }
 
 button:hover{
@@ -90,20 +89,26 @@ button:hover{
   transform:scale(1.05);
 }
 
-/* CARDS (RF-02 / RF-06) */
-article{
+#animales article{
   background:#1e1e1e;
   padding:20px;
-  margin-top:20px;
-  border-radius:10px;
-  border-left:4px solid #F9A825;
+  margin-top:15px;
+  border-left:5px solid #F9A825;
+  border-radius:8px;
 }
 
-/* IMÁGENES */
+#conservacion article{
+  background:#1e1e1e;
+  padding:20px;
+  margin-top:15px;
+  border-left:5px solid #1B5E20;
+  border-radius:8px;
+}
+
 img{
   width:300px;
   border-radius:10px;
-  margin-top:10px;
+  margin:10px;
   transition:0.3s;
 }
 
@@ -111,11 +116,10 @@ img:hover{
   transform:scale(1.03);
 }
 
-/* GALERIA (RF-03) */
 #galeria{
   display:grid;
   grid-template-columns:repeat(4, 1fr);
-  gap:15px;
+  gap:10px;
 }
 
 #galeria img{
@@ -125,7 +129,6 @@ img:hover{
   border-radius:10px;
 }
 
-/* TABLA (RF-04) */
 table{
   width:100%;
   border-collapse:collapse;
@@ -136,45 +139,80 @@ table{
 table th{
   background:#1B5E20;
   color:#F9A825;
+  padding:12px;
 }
 
-table td, table th{
+table td{
   border:1px solid #333;
   padding:12px;
   text-align:center;
 }
 
-/* FORMULARIO (RF-10 mejorado UX) */
+#educativos article{
+  background:#1e1e1e;
+  padding:20px;
+  margin-top:15px;
+  border-radius:8px;
+  border-left:4px solid #F9A825;
+}
+
+#video{
+  text-align:center;
+}
+
+#video iframe{
+  width:800px;
+  height:450px;
+  border-radius:10px;
+}
+
+#ubicacion{
+  text-align:center;
+}
+
+#ubicacion iframe{
+  width:800px;
+  height:400px;
+  border-radius:10px;
+}
+
 form{
   background:#1e1e1e;
   padding:30px;
-  border-radius:10px;
   width:500px;
+  border-radius:10px;
 }
 
 form input,
 form textarea,
 form select{
-  display:block;
   width:100%;
-  margin:10px 0;
   padding:10px;
+  margin:10px 0;
   border:none;
   border-radius:5px;
+  font-size:14px;
 }
 
-/* INPUT FOCUS UX */
 form input:focus,
 form textarea:focus,
 form select:focus{
   outline:2px solid #F9A825;
 }
 
-/* FOOTER */
 footer{
   background:#000;
   text-align:center;
   padding:40px;
   margin-top:50px;
   border-top:3px solid #1B5E20;
+}
+
+h2{
+  color:#F9A825;
+  margin-bottom:20px;
+}
+
+h3{
+  color:#fff;
 }
