@@ -1,12 +1,6 @@
 <?php
 
-$conexion = mysqli_connect(
-    "localhost",
-    "root",
-    "",
-    "zoo",
-    3307
-);
+$conexion = mysqli_connect("localhost","root","","zoo");
 
 if(!$conexion){
     die("Error de conexión");
