@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 /* ---------- Conexión ----------
    OJO: cambia el puerto a 3306 si tu MySQL/XAMPP usa el puerto por defecto.
-   Si usas MAMP suele ser 3306 u 8889. */
+   no cambiar los puertos (eso complica as cosas) */
 $host   = '127.0.0.1';
 $user   = 'root';
 $pass   = '';
