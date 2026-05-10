@@ -4,7 +4,98 @@
   <meta charset="UTF-8">
   <title>Zoológico de Quito</title>
   <meta name="viewport" content="width=1280">
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#111;
+      color:white;
+      min-width:1280px;
+    }
+
+    nav{
+      background:#1B5E20;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:10px 30px;
+    }
+
+    nav h1{
+      color:#F9A825;
+      margin:0;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:15px;
+      margin:0;
+      padding:0;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    section{
+      padding:60px 80px;
+    }
+
+    #inicio{
+      background:#1B5E20;
+      text-align:center;
+      padding:120px 80px;
+    }
+
+    #inicio h1{
+      font-size:40px;
+      color:#F9A825;
+    }
+
+    button{
+      background:#F9A825;
+      border:none;
+      padding:10px 20px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    article{
+      background:#222;
+      padding:20px;
+      margin-top:20px;
+      border-radius:10px;
+    }
+
+    img{
+      width:300px;
+      border-radius:10px;
+      margin-top:10px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:20px;
+      background:#222;
+    }
+
+    table td, table th{
+      border:1px solid #444;
+      padding:10px;
+    }
+
+    footer{
+      background:#000;
+      text-align:center;
+      padding:30px;
+      margin-top:40px;
+    }
+  </style>
 </head>
 
 <body>
@@ -62,6 +153,7 @@
 <!-- GALERIA -->
 <section id="galeria">
   <h2>Galería</h2>
+
   <img src="img/leon.jpg">
   <img src="img/cocodrilo.jpg">
   <img src="img/mono.jpg">
@@ -75,10 +167,22 @@
   <p>Martes a Domingo: 9h00 - 16h00</p>
 
   <table>
-    <tr><th>Tipo</th><th>Precio</th></tr>
-    <tr><td>Adultos</td><td>$7.00</td></tr>
-    <tr><td>Niños</td><td>$5.00</td></tr>
-    <tr><td>Tercera edad</td><td>$3.50</td></tr>
+    <tr>
+      <th>Tipo</th>
+      <th>Precio</th>
+    </tr>
+    <tr>
+      <td>Adultos</td>
+      <td>$7.00</td>
+    </tr>
+    <tr>
+      <td>Niños</td>
+      <td>$5.00</td>
+    </tr>
+    <tr>
+      <td>Tercera edad</td>
+      <td>$3.50</td>
+    </tr>
   </table>
 </section>
 
@@ -98,18 +202,29 @@
   <h2>Ubicación</h2>
   <p>Guayllabamba, Quito, Ecuador</p>
 
-  <iframe src="https://www.google.com/maps/embed"></iframe>
+  <iframe
+    src="https://www.google.com/maps/embed"
+    width="600"
+    height="300">
+  </iframe>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto">
   <h2>Contacto</h2>
 
-  <form>
-    <input type="text" placeholder="Nombre">
-    <input type="email" placeholder="Correo">
-    <textarea placeholder="Mensaje"></textarea>
-    <button>ENVIAR</button>
+  <form action="guardar.php" method="POST">
+
+    <input type="text" name="nombre" placeholder="Nombre"><br><br>
+
+    <input type="email" name="correo" placeholder="Correo"><br><br>
+
+    <textarea name="mensaje" placeholder="Mensaje"></textarea><br><br>
+
+    <button type="submit">
+      ENVIAR
+    </button>
+
   </form>
 </section>
 
