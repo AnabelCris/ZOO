@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Zoológico de Quito - Guayllabamba</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoológico de Quito – Guayllabamba</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<!-- NAV (RF-11) -->
-<nav>
-    <h1>QuitoZoo</h1>
+  <!-- ========== NAV (RF-11) ========== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo">
+        <span class="logo-icon">🦁</span>
+        <span class="logo-text">QuitoZoo</span>
+      </a>
 
-    <ul>
+      <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#animales">Animales</a></li>
         <li><a href="#conservacion">Conservación</a></li>
@@ -22,159 +27,320 @@
         <li><a href="#video">Video</a></li>
         <li><a href="#ubicacion">Ubicación</a></li>
         <li><a href="#contacto">Contacto</a></li>
-    </ul>
-</nav>
+      </ul>
+    </div>
+  </nav>
 
-<!-- INICIO (RF-01) -->
-<section id="inicio">
-    <h1>Zoológico de Quito</h1>
-    <p>Descubre la naturaleza viva</p>
-    <button onclick="document.getElementById('horarios').scrollIntoView()">PLANIFICA TU VISITA</button>
-</section>
+  <!-- ========== HERO / INICIO (RF-01) ========== -->
+  <header id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-label">Guayllabamba · Ecuador</p>
+      <h1 class="hero-title">Zoológico<br>de Quito</h1>
+      <p class="hero-sub">Descubre la naturaleza viva</p>
+      <a href="#horarios" class="btn btn-hero">Planifica tu visita</a>
+    </div>
+    <div class="hero-scroll">↓</div>
+  </header>
 
-<!-- ANIMALES (RF-02) -->
-<section id="animales">
-    <h2>Animales</h2>
+  <main>
 
-    <article>
-        <h3>Mamíferos</h3>
-        <p>Jaguar, oso de anteojos, puma...</p>
-    </article>
+    <!-- ========== ANIMALES (RF-02) ========== -->
+    <section id="animales" class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-tag">Fauna</span>
+          <h2>Nuestros Animales</h2>
+          <p class="section-desc">Hogar de más de 1000 animales de la región andina y amazónica del Ecuador.</p>
+        </div>
 
-    <article>
-        <h3>Aves</h3>
-        <p>Cóndor andino, águila, tucanes...</p>
-    </article>
+        <div class="cards-grid">
+          <article class="animal-card">
+            <div class="card-icon">🐆</div>
+            <h3>Mamíferos</h3>
+            <p>Jaguar, oso de anteojos, puma, tapir, ocelote y muchas especies más que habitan los bosques ecuatorianos.</p>
+          </article>
 
-    <article>
-        <h3>Reptiles</h3>
-        <p>Iguanas, boas, tortugas...</p>
-    </article>
-</section>
+          <article class="animal-card">
+            <div class="card-icon">🦅</div>
+            <h3>Aves</h3>
+            <p>Cóndor andino, águila harpía, tucanes, loros, colibríes y más de 200 especies de aves nativas.</p>
+          </article>
 
-<!-- CONSERVACIÓN (RF-06) -->
-<section id="conservacion">
-    <h2>Conservación</h2>
+          <article class="animal-card">
+            <div class="card-icon">🦎</div>
+            <h3>Reptiles</h3>
+            <p>Iguanas, boas constrictoras, tortugas gigantes de Galápagos y caimanes del Oriente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <article>
-        <h3>Oso de anteojos</h3>
-        <p>Protección y monitoreo de especies andinas.</p>
-    </article>
+    <!-- ========== CONSERVACIÓN (RF-06) ========== -->
+    <section id="conservacion" class="section section-dark">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-tag">Misión</span>
+          <h2>Conservación</h2>
+          <p class="section-desc">Trabajamos activamente para preservar las especies más vulnerables del Ecuador.</p>
+        </div>
 
-    <article>
-        <h3>Cóndor Andino</h3>
-        <p>Programa de reproducción y reintroducción.</p>
-    </article>
-</section>
+        <div class="conservacion-grid">
+          <article class="conservacion-card">
+            <div class="conservacion-num">01</div>
+            <h3>Oso de Anteojos</h3>
+            <p>Protección, monitoreo y reproducción en cautiverio de esta especie andina en peligro de extinción.</p>
+            <span class="status-badge">Activo</span>
+          </article>
 
-<!-- GALERÍA (RF-03) -->
-<section id="galeria">
-    <h2>Galería</h2>
+          <article class="conservacion-card">
+            <div class="conservacion-num">02</div>
+            <h3>Cóndor Andino</h3>
+            <p>Programa de reproducción y reintroducción al hábitat natural del ave símbolo de los Andes.</p>
+            <span class="status-badge">Activo</span>
+          </article>
 
-    <img src="img/1.jpg">
-    <img src="img/2.jpg">
-    <img src="img/3.jpg">
-    <img src="img/4.jpg">
-    <img src="img/5.jpg">
-    <img src="img/6.jpg">
-    <img src="img/7.jpg">
-    <img src="img/8.jpg">
-</section>
+          <article class="conservacion-card">
+            <div class="conservacion-num">03</div>
+            <h3>Tortuga Galápagos</h3>
+            <p>Cuidado y recuperación de tortugas gigantes como parte del programa de conservación isleña.</p>
+            <span class="status-badge">Activo</span>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<!-- HORARIOS Y PRECIOS (RF-04) -->
-<section id="horarios">
-    <h2>Horarios y Precios</h2>
+    <!-- ========== GALERÍA (RF-03) ========== -->
+    <section id="galeria" class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-tag">Imágenes</span>
+          <h2>Galería</h2>
+        </div>
 
-    <p><strong>Horario:</strong> Martes a Domingo 9h00 - 16h00</p>
+        <div class="galeria-grid">
+          <figure class="galeria-item galeria-big">
+            <img src="img/1.jpg" alt="Animal en el zoológico 1">
+          </figure>
+          <figure class="galeria-item">
+            <img src="img/2.jpg" alt="Animal en el zoológico 2">
+          </figure>
+          <figure class="galeria-item">
+            <img src="img/3.jpg" alt="Animal en el zoológico 3">
+          </figure>
+          <figure class="galeria-item">
+            <img src="img/4.jpg" alt="Animal en el zoológico 4">
+          </figure>
+          <figure class="galeria-item">
+            <img src="img/5.jpg" alt="Animal en el zoológico 5">
+          </figure>
+          <figure class="galeria-item galeria-wide">
+            <img src="img/6.jpg" alt="Animal en el zoológico 6">
+          </figure>
+          <figure class="galeria-item">
+            <img src="img/7.jpg" alt="Animal en el zoológico 7">
+          </figure>
+          <figure class="galeria-item">
+            <img src="img/8.jpg" alt="Animal en el zoológico 8">
+          </figure>
+        </div>
+      </div>
+    </section>
 
-    <table>
-        <tr>
-            <th>Tipo</th>
-            <th>Precio</th>
-        </tr>
-        <tr><td>Adultos</td><td>$7.00</td></tr>
-        <tr><td>Niños (3-11)</td><td>$5.00</td></tr>
-        <tr><td>Tercera edad</td><td>$3.50</td></tr>
-        <tr><td>Estudiantes</td><td>$4.50</td></tr>
-        <tr><td>Menores de 3</td><td>Gratis</td></tr>
-    </table>
-</section>
+    <!-- ========== HORARIOS Y PRECIOS (RF-04) ========== -->
+    <section id="horarios" class="section section-dark">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-tag">Información</span>
+          <h2>Horarios y Precios</h2>
+        </div>
 
-<!-- EDUCACIÓN (RF-05) -->
-<section id="educativos">
-    <h2>Programas Educativos</h2>
+        <div class="horarios-wrap">
+          <div class="horario-box">
+            <p class="horario-label">Días de atención</p>
+            <p class="horario-valor">Martes a Domingo</p>
+            <p class="horario-label">Horario</p>
+            <p class="horario-valor">09:00 – 16:00</p>
+            <p class="horario-nota">⚠️ Cerrado los lunes</p>
+          </div>
 
-    <article>
-        <h3>Visitas escolares</h3>
-        <p>Experiencias guiadas para estudiantes.</p>
-        <button>Solicitar información</button>
-    </article>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Categoría</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Adultos</td>
+                  <td class="precio">$7.00</td>
+                </tr>
+                <tr>
+                  <td>Niños (3–11 años)</td>
+                  <td class="precio">$5.00</td>
+                </tr>
+                <tr>
+                  <td>Tercera edad</td>
+                  <td class="precio">$3.50</td>
+                </tr>
+                <tr>
+                  <td>Estudiantes</td>
+                  <td class="precio">$4.50</td>
+                </tr>
+                <tr>
+                  <td>Menores de 3 años</td>
+                  <td class="precio gratis">Gratis</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <article>
-        <h3>Talleres ambientales</h3>
-        <p>Educación sobre biodiversidad.</p>
-        <button>Solicitar información</button>
-    </article>
-</section>
+    <!-- ========== EDUCACIÓN (RF-05) ========== -->
+    <section id="educativos" class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-tag">Programas</span>
+          <h2>Educación Ambiental</h2>
+          <p class="section-desc">Formamos conciencia ecológica desde temprana edad.</p>
+        </div>
 
-<!-- VIDEO (RF-07) -->
-<section id="video">
-    <h2>Video Institucional</h2>
+        <div class="edu-grid">
+          <article class="edu-card">
+            <div class="edu-icon">🏫</div>
+            <h3>Visitas Escolares</h3>
+            <p>Experiencias guiadas adaptadas al currículo escolar, para grupos de todas las edades.</p>
+            <button type="button" class="btn btn-outline">Solicitar información</button>
+          </article>
 
-    <iframe width="800" height="450"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        frameborder="0" allowfullscreen>
-    </iframe>
-</section>
+          <article class="edu-card">
+            <div class="edu-icon">🌿</div>
+            <h3>Talleres Ambientales</h3>
+            <p>Actividades prácticas sobre biodiversidad, conservación y ecosistemas ecuatorianos.</p>
+            <button type="button" class="btn btn-outline">Solicitar información</button>
+          </article>
 
-<!-- UBICACIÓN (RF-09) -->
-<section id="ubicacion">
-    <h2>Ubicación</h2>
+          <article class="edu-card">
+            <div class="edu-icon">🔭</div>
+            <h3>Ciencia Joven</h3>
+            <p>Programas de investigación y observación para jóvenes interesados en biología y ecología.</p>
+            <button type="button" class="btn btn-outline">Solicitar información</button>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <p>Guayllabamba, Quito - Ecuador</p>
+    <!-- ========== VIDEO (RF-07) ========== -->
+    <section id="video" class="section section-dark">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-tag">Institucional</span>
+          <h2>Video Institucional</h2>
+        </div>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Video institucional del Zoológico de Quito"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
 
-    <iframe
-        src="https://www.google.com/maps/embed?pb="
-        width="800"
-        height="400"
-        style="border:0;"
-        allowfullscreen>
-    </iframe>
-</section>
+    <!-- ========== UBICACIÓN (RF-09) ========== -->
+    <section id="ubicacion" class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-tag">¿Cómo llegar?</span>
+          <h2>Ubicación</h2>
+          <p class="section-desc">📍 Guayllabamba, Quito – Ecuador</p>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3990.9!2d-78.327!3d-0.043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMDDCsDAyJzM0LjgiUyA3OMKwMTknMzcuMiJX!5e0!3m2!1ses!2sec!4v1680000000000"
+            title="Mapa del Zoológico de Quito en Guayllabamba"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
 
-<!-- CONTACTO (RF-10) -->
-<section id="contacto">
-    <h2>Contacto</h2>
+    <!-- ========== CONTACTO (RF-10) ========== -->
+    <section id="contacto" class="section section-dark">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-tag">Escríbenos</span>
+          <h2>Contacto</h2>
+          <p class="section-desc">Estamos para atenderte. Completa el formulario y te responderemos pronto.</p>
+        </div>
 
-    <form action="guardar.php" method="POST">
+        <form action="guardar.php" method="POST" class="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required>
+            </div>
+            <div class="form-group">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" placeholder="juan@correo.com" required>
+            </div>
+          </div>
 
-        <input type="text" name="nombre" placeholder="Nombre completo" required>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+593 99 000 0000">
+            </div>
+            <div class="form-group">
+              <label for="tipo">Tipo de consulta</label>
+              <select id="tipo" name="tipo" required>
+                <option value="">Selecciona una opción</option>
+                <option value="visita">Visita General</option>
+                <option value="educativo">Programa Educativo</option>
+                <option value="conservacion">Conservación</option>
+                <option value="donacion">Donaciones</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+          </div>
 
-        <input type="email" name="correo" placeholder="Correo electrónico" required>
+          <div class="form-group full">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+          </div>
 
-        <input type="tel" name="telefono" placeholder="Teléfono">
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">Enviar consulta →</button>
+          </div>
+        </form>
+      </div>
+    </section>
 
-        <select name="tipo" required>
-            <option value="">Tipo de consulta</option>
-            <option>Visita General</option>
-            <option>Programa Educativo</option>
-            <option>Conservación</option>
-            <option>Donaciones</option>
-            <option>Otro</option>
-        </select>
+  </main>
 
-        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-
-        <button type="submit">ENVIAR CONSULTA</button>
-
-    </form>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>Zoológico de Quito - Guayllabamba</p>
-    <p>Instagram | Facebook | YouTube</p>
-</footer>
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🦁</span>
+        <span class="logo-text">QuitoZoo</span>
+        <p>Zoológico de Quito – Guayllabamba, Ecuador</p>
+      </div>
+      <nav class="footer-social" aria-label="Redes sociales">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </nav>
+      <p class="footer-copy">© 2025 Zoológico de Quito. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
