@@ -31,7 +31,7 @@ $host   = '127.0.0.1';
 $user   = 'root';
 $pass   = '';
 $db     = 'zoo';
-$puerto = 3307;
+$puerto = 3306;
 
 $conexion = @mysqli_connect($host, $user, $pass, $db, $puerto);
 if (!$conexion) {
