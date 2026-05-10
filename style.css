@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    width: 1280px;
+    margin: 0 auto;
+    background: #f4f6f6;
+}
+
+/* NAV */
+nav {
+    background: #2e7d32;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* INICIO */
+#inicio {
+    height: 400px;
+    background: #4caf50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#inicio button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ffb300;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* SECCIONES GENERALES */
+section {
+    padding: 40px;
+}
+
+/* ANIMALES */
+#animales {
+    text-align: center;
+}
+
+#animales article {
+    display: inline-block;
+    width: 300px;
+    margin: 15px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#animales img {
+    width: 100%;
+    height: 200px;
+}
+
+/* CONSERVACIÓN */
+#conservacion {
+    background: #e8f5e9;
+    text-align: center;
+}
+
+/* GALERÍA */
+#galeria {
+    text-align: center;
+}
+
+#galeria img {
+    width: 280px;
+    margin: 10px;
+}
+
+/* HORARIOS */
+#horarios {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    width: 500px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+}
+
+/* PROGRAMAS */
+#programas {
+    text-align: center;
+}
+
+/* VIDEO */
+#video {
+    text-align: center;
+}
+
+iframe {
+    width: 800px;
+    height: 450px;
+}
+
+/* UBICACIÓN */
+#ubicacion {
+    text-align: center;
+}
+
+/* CONTACTO */
+#contacto {
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
