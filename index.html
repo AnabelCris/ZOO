@@ -2,47 +2,179 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Contacto | Zoológico de Quito</title>
+    <title>Zoológico de Quito - Guayllabamba</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <h2>Formulario de Contacto</h2>
-    <p>Escríbenos tus consultas sobre visitas, programas educativos o conservación.</p>
+<!-- NAV (RF-11) -->
+<nav>
+    <h1>QuitoZoo</h1>
+
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#animales">Animales</a></li>
+        <li><a href="#conservacion">Conservación</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#horarios">Horarios</a></li>
+        <li><a href="#educativos">Educación</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<!-- INICIO (RF-01) -->
+<section id="inicio">
+    <h1>Zoológico de Quito</h1>
+    <p>Descubre la naturaleza viva</p>
+    <button onclick="document.getElementById('horarios').scrollIntoView()">PLANIFICA TU VISITA</button>
+</section>
+
+<!-- ANIMALES (RF-02) -->
+<section id="animales">
+    <h2>Animales</h2>
+
+    <article>
+        <h3>Mamíferos</h3>
+        <p>Jaguar, oso de anteojos, puma...</p>
+    </article>
+
+    <article>
+        <h3>Aves</h3>
+        <p>Cóndor andino, águila, tucanes...</p>
+    </article>
+
+    <article>
+        <h3>Reptiles</h3>
+        <p>Iguanas, boas, tortugas...</p>
+    </article>
+</section>
+
+<!-- CONSERVACIÓN (RF-06) -->
+<section id="conservacion">
+    <h2>Conservación</h2>
+
+    <article>
+        <h3>Oso de anteojos</h3>
+        <p>Protección y monitoreo de especies andinas.</p>
+    </article>
+
+    <article>
+        <h3>Cóndor Andino</h3>
+        <p>Programa de reproducción y reintroducción.</p>
+    </article>
+</section>
+
+<!-- GALERÍA (RF-03) -->
+<section id="galeria">
+    <h2>Galería</h2>
+
+    <img src="img/1.jpg">
+    <img src="img/2.jpg">
+    <img src="img/3.jpg">
+    <img src="img/4.jpg">
+    <img src="img/5.jpg">
+    <img src="img/6.jpg">
+    <img src="img/7.jpg">
+    <img src="img/8.jpg">
+</section>
+
+<!-- HORARIOS Y PRECIOS (RF-04) -->
+<section id="horarios">
+    <h2>Horarios y Precios</h2>
+
+    <p><strong>Horario:</strong> Martes a Domingo 9h00 - 16h00</p>
+
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Precio</th>
+        </tr>
+        <tr><td>Adultos</td><td>$7.00</td></tr>
+        <tr><td>Niños (3-11)</td><td>$5.00</td></tr>
+        <tr><td>Tercera edad</td><td>$3.50</td></tr>
+        <tr><td>Estudiantes</td><td>$4.50</td></tr>
+        <tr><td>Menores de 3</td><td>Gratis</td></tr>
+    </table>
+</section>
+
+<!-- EDUCACIÓN (RF-05) -->
+<section id="educativos">
+    <h2>Programas Educativos</h2>
+
+    <article>
+        <h3>Visitas escolares</h3>
+        <p>Experiencias guiadas para estudiantes.</p>
+        <button>Solicitar información</button>
+    </article>
+
+    <article>
+        <h3>Talleres ambientales</h3>
+        <p>Educación sobre biodiversidad.</p>
+        <button>Solicitar información</button>
+    </article>
+</section>
+
+<!-- VIDEO (RF-07) -->
+<section id="video">
+    <h2>Video Institucional</h2>
+
+    <iframe width="800" height="450"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        frameborder="0" allowfullscreen>
+    </iframe>
+</section>
+
+<!-- UBICACIÓN (RF-09) -->
+<section id="ubicacion">
+    <h2>Ubicación</h2>
+
+    <p>Guayllabamba, Quito - Ecuador</p>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb="
+        width="800"
+        height="400"
+        style="border:0;"
+        allowfullscreen>
+    </iframe>
+</section>
+
+<!-- CONTACTO (RF-10) -->
+<section id="contacto">
+    <h2>Contacto</h2>
 
     <form action="guardar.php" method="POST">
 
-        <!-- Nombre completo -->
-        <label for="nombre">Nombre completo *</label><br>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
 
-        <!-- Correo -->
-        <label for="correo">Correo electrónico *</label><br>
-        <input type="email" id="correo" name="correo" required><br><br>
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
 
-        <!-- Teléfono -->
-        <label for="telefono">Teléfono (opcional)</label><br>
-        <input type="tel" id="telefono" name="telefono"><br><br>
+        <input type="tel" name="telefono" placeholder="Teléfono">
 
-        <!-- Tipo de consulta -->
-        <label for="tipo">Tipo de consulta *</label><br>
-        <select id="tipo" name="tipo" required>
-            <option value="">-- Seleccione --</option>
-            <option value="visita">Visita General</option>
-            <option value="educativo">Programa Educativo</option>
-            <option value="conservacion">Conservación</option>
-            <option value="donaciones">Donaciones</option>
-            <option value="otro">Otro</option>
-        </select><br><br>
+        <select name="tipo" required>
+            <option value="">Tipo de consulta</option>
+            <option>Visita General</option>
+            <option>Programa Educativo</option>
+            <option>Conservación</option>
+            <option>Donaciones</option>
+            <option>Otro</option>
+        </select>
 
-        <!-- Mensaje -->
-        <label for="mensaje">Mensaje *</label><br>
-        <textarea id="mensaje" name="mensaje" rows="6" required></textarea><br><br>
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
 
-        <!-- Botón -->
         <button type="submit">ENVIAR CONSULTA</button>
 
     </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>Zoológico de Quito - Guayllabamba</p>
+    <p>Instagram | Facebook | YouTube</p>
+</footer>
 
 </body>
 </html>
