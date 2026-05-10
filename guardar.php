@@ -4,7 +4,8 @@ $conexion = mysqli_connect(
     "localhost",
     "root",
     "",
-    "zoologico"
+    "zoo",
+    3307
 );
 
 if(!$conexion){
