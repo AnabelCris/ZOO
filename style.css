@@ -1,162 +1,110 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    width: 1280px;
-    margin: 0 auto;
-    background: #f4f6f6;
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#111;
+  color:white;
+  min-width:1280px;
 }
 
 /* NAV */
-nav {
-    background: #2e7d32;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+nav{
+  background:#1B5E20;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 30px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 12px;
+nav h1{
+  color:#F9A825;
+  margin:0;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:15px;
+}
+
+nav ul li a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* SECCIONES */
+section{
+  padding:60px 80px;
 }
 
 /* INICIO */
-#inicio {
-    height: 400px;
-    background: #4caf50;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+#inicio{
+  background:#1B5E20;
+  text-align:center;
+  padding:120px 80px;
 }
 
-#inicio button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #ffb300;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
+#inicio h1{
+  font-size:40px;
+  color:#F9A825;
 }
 
-/* SECCIONES GENERALES */
-section {
-    padding: 40px;
+/* BOTONES */
+button{
+  background:#F9A825;
+  border:none;
+  padding:10px 20px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-/* ANIMALES */
-#animales {
-    text-align: center;
+/* CARDS */
+article{
+  background:#222;
+  padding:20px;
+  margin-top:20px;
+  border-radius:10px;
 }
 
-#animales article {
-    display: inline-block;
-    width: 300px;
-    margin: 15px;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
+/* IMÁGENES */
+img{
+  width:300px;
+  border-radius:10px;
+  margin-top:10px;
 }
 
-#animales img {
-    width: 100%;
-    height: 200px;
+/* GALERIA */
+#galeria img{
+  width:250px;
+  margin:10px;
 }
 
-/* CONSERVACIÓN */
-#conservacion {
-    background: #e8f5e9;
-    text-align: center;
+/* TABLA */
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+  background:#222;
 }
 
-/* GALERÍA */
-#galeria {
-    text-align: center;
+table td, table th{
+  border:1px solid #444;
+  padding:10px;
 }
 
-#galeria img {
-    width: 280px;
-    margin: 10px;
-}
-
-/* HORARIOS */
-#horarios {
-    text-align: center;
-}
-
-table {
-    margin: auto;
-    width: 500px;
-    border-collapse: collapse;
-    background: white;
-}
-
-th, td {
-    padding: 10px;
-}
-
-/* PROGRAMAS */
-#programas {
-    text-align: center;
-}
-
-/* VIDEO */
-#video {
-    text-align: center;
-}
-
-iframe {
-    width: 800px;
-    height: 450px;
-}
-
-/* UBICACIÓN */
-#ubicacion {
-    text-align: center;
-}
-
-/* CONTACTO */
-#contacto {
-    text-align: center;
-}
-
-form {
-    width: 300px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-input, textarea {
-    margin: 10px 0;
-    padding: 10px;
+/* FORM */
+form input,
+form textarea{
+  display:block;
+  width:300px;
+  margin:10px 0;
+  padding:8px;
 }
 
 /* FOOTER */
-footer {
-    background: #2e7d32;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-footer a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+footer{
+  background:#000;
+  text-align:center;
+  padding:30px;
+  margin-top:40px;
 }
