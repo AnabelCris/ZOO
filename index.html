@@ -1,237 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Zoológico de Quito</title>
-  <meta name="viewport" content="width=1280">
-
-  <style>
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      background:#111;
-      color:white;
-      min-width:1280px;
-    }
-
-    nav{
-      background:#1B5E20;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:10px 30px;
-    }
-
-    nav h1{
-      color:#F9A825;
-      margin:0;
-    }
-
-    nav ul{
-      list-style:none;
-      display:flex;
-      gap:15px;
-      margin:0;
-      padding:0;
-    }
-
-    nav ul li a{
-      color:white;
-      text-decoration:none;
-      font-size:14px;
-    }
-
-    section{
-      padding:60px 80px;
-    }
-
-    #inicio{
-      background:#1B5E20;
-      text-align:center;
-      padding:120px 80px;
-    }
-
-    #inicio h1{
-      font-size:40px;
-      color:#F9A825;
-    }
-
-    button{
-      background:#F9A825;
-      border:none;
-      padding:10px 20px;
-      font-weight:bold;
-      cursor:pointer;
-    }
-
-    article{
-      background:#222;
-      padding:20px;
-      margin-top:20px;
-      border-radius:10px;
-    }
-
-    img{
-      width:300px;
-      border-radius:10px;
-      margin-top:10px;
-    }
-
-    table{
-      width:100%;
-      border-collapse:collapse;
-      margin-top:20px;
-      background:#222;
-    }
-
-    table td, table th{
-      border:1px solid #444;
-      padding:10px;
-    }
-
-    footer{
-      background:#000;
-      text-align:center;
-      padding:30px;
-      margin-top:40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Contacto | Zoológico de Quito</title>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-  <h1>Zoológico de Quito</h1>
-  <ul>
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#animales">Animales</a></li>
-    <li><a href="#conservacion">Conservación</a></li>
-    <li><a href="#galeria">Galería</a></li>
-    <li><a href="#horarios">Horarios</a></li>
-    <li><a href="#programas">Programas</a></li>
-    <li><a href="#ubicacion">Ubicación</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-</nav>
+    <h2>Formulario de Contacto</h2>
+    <p>Escríbenos tus consultas sobre visitas, programas educativos o conservación.</p>
 
-<!-- INICIO -->
-<section id="inicio">
-  <h1>Descubre la naturaleza viva</h1>
-  <p>Bienvenido al Zoológico de Quito</p>
-  <button>PLANIFICA TU VISITA</button>
-</section>
+    <form action="guardar.php" method="POST">
 
-<!-- ANIMALES -->
-<section id="animales">
-  <h2>Catálogo de Animales</h2>
+        <!-- Nombre completo -->
+        <label for="nombre">Nombre completo *</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
 
-  <article>
-    <h3>Mamíferos</h3>
-    <img src="img/leon.jpg" alt="animal">
-    <p>Oso de anteojos - Tremarctos ornatus</p>
-  </article>
+        <!-- Correo -->
+        <label for="correo">Correo electrónico *</label><br>
+        <input type="email" id="correo" name="correo" required><br><br>
 
-  <article>
-    <h3>Aves</h3>
-    <img src="img/mono.jpg" alt="animal">
-    <p>Cóndor andino</p>
-  </article>
-</section>
+        <!-- Teléfono -->
+        <label for="telefono">Teléfono (opcional)</label><br>
+        <input type="tel" id="telefono" name="telefono"><br><br>
 
-<!-- CONSERVACION -->
-<section id="conservacion">
-  <h2>Conservamos la vida silvestre</h2>
+        <!-- Tipo de consulta -->
+        <label for="tipo">Tipo de consulta *</label><br>
+        <select id="tipo" name="tipo" required>
+            <option value="">-- Seleccione --</option>
+            <option value="visita">Visita General</option>
+            <option value="educativo">Programa Educativo</option>
+            <option value="conservacion">Conservación</option>
+            <option value="donaciones">Donaciones</option>
+            <option value="otro">Otro</option>
+        </select><br><br>
 
-  <article>
-    <h3>Programa Cóndor Andino</h3>
-    <p>Protección y reproducción del cóndor andino.</p>
-    <button>QUIERO VISITAR</button>
-  </article>
-</section>
+        <!-- Mensaje -->
+        <label for="mensaje">Mensaje *</label><br>
+        <textarea id="mensaje" name="mensaje" rows="6" required></textarea><br><br>
 
-<!-- GALERIA -->
-<section id="galeria">
-  <h2>Galería</h2>
+        <!-- Botón -->
+        <button type="submit">ENVIAR CONSULTA</button>
 
-  <img src="img/leon.jpg">
-  <img src="img/cocodrilo.jpg">
-  <img src="img/mono.jpg">
-  <img src="img/puercos.jpg">
-</section>
-
-<!-- HORARIOS -->
-<section id="horarios">
-  <h2>Horarios y Precios</h2>
-
-  <p>Martes a Domingo: 9h00 - 16h00</p>
-
-  <table>
-    <tr>
-      <th>Tipo</th>
-      <th>Precio</th>
-    </tr>
-    <tr>
-      <td>Adultos</td>
-      <td>$7.00</td>
-    </tr>
-    <tr>
-      <td>Niños</td>
-      <td>$5.00</td>
-    </tr>
-    <tr>
-      <td>Tercera edad</td>
-      <td>$3.50</td>
-    </tr>
-  </table>
-</section>
-
-<!-- PROGRAMAS -->
-<section id="programas">
-  <h2>Programas Educativos</h2>
-
-  <article>
-    <h3>Visitas guiadas</h3>
-    <p>Recorridos para escuelas y colegios.</p>
-    <button>SOLICITAR INFORMACIÓN</button>
-  </article>
-</section>
-
-<!-- UBICACION -->
-<section id="ubicacion">
-  <h2>Ubicación</h2>
-  <p>Guayllabamba, Quito, Ecuador</p>
-
-  <iframe
-    src="https://www.google.com/maps/embed"
-    width="600"
-    height="300">
-  </iframe>
-</section>
-
-<!-- CONTACTO -->
-<section id="contacto">
-  <h2>Contacto</h2>
-
-  <form action="guardar.php" method="POST">
-
-    <input type="text" name="nombre" placeholder="Nombre"><br><br>
-
-    <input type="email" name="correo" placeholder="Correo"><br><br>
-
-    <textarea name="mensaje" placeholder="Mensaje"></textarea><br><br>
-
-    <button type="submit">
-      ENVIAR
-    </button>
-
-  </form>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 Zoológico de Quito
-</footer>
+    </form>
 
 </body>
 </html>
