@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zoológico de Quito – Guayllabamba</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ========== NAV (RF-11) ========== -->
+  <!-- ========== NAV ========== -->
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#inicio" class="nav-logo">
         <span class="logo-icon">🦁</span>
-        <span class="logo-text">QuitoZoo</span>
+        <span>QuitoZoo</span>
       </a>
 
       <ul class="nav-links">
@@ -31,21 +33,29 @@
     </div>
   </nav>
 
-  <!-- ========== HERO / INICIO (RF-01) ========== -->
+  <!-- ========== HERO / INICIO ========== -->
   <header id="inicio" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-label">Guayllabamba · Ecuador</p>
-      <h1 class="hero-title">Zoológico<br>de Quito</h1>
-      <p class="hero-sub">Descubre la naturaleza viva</p>
-      <a href="#horarios" class="btn btn-hero">Planifica tu visita</a>
+    <div class="hero-grid">
+      <img src="img/juguar.png" alt="Jaguar" class="hero-img hero-img-left">
+
+      <div class="hero-center">
+        <p class="hero-label">Guayllabamba · Ecuador</p>
+        <h1 class="hero-title">
+          Zoológico
+          <span>de Quito</span>
+        </h1>
+        <p class="hero-sub">Descubre la naturaleza viva del Ecuador en el corazón de los Andes.</p>
+        <a href="#horarios" class="btn btn-hero">Planifica tu visita</a>
+      </div>
+
+      <img src="img/mono.jpg" alt="Mono" class="hero-img hero-img-right">
     </div>
     <div class="hero-scroll">↓</div>
   </header>
 
   <main>
 
-    <!-- ========== ANIMALES (RF-02) ========== -->
+    <!-- ========== ANIMALES (2 COLUMNAS) ========== -->
     <section id="animales" class="section">
       <div class="section-inner">
         <div class="section-header">
@@ -55,28 +65,80 @@
         </div>
 
         <div class="cards-grid">
+
           <article class="animal-card">
-            <div class="card-icon">🐆</div>
-            <h3>Mamíferos</h3>
-            <p>Jaguar, oso de anteojos, puma, tapir, ocelote y muchas especies más que habitan los bosques ecuatorianos.</p>
+            <div class="icon-box" aria-hidden="true">
+              <!-- Icono mamífero (jaguar) -->
+              <svg viewBox="0 0 64 64">
+                <path d="M14 36c0-9 8-16 18-16s18 7 18 16c0 8-7 14-18 14s-18-6-18-14z"/>
+                <circle cx="24" cy="34" r="2"/>
+                <circle cx="40" cy="34" r="2"/>
+                <path d="M32 40c-2 0-3 1-3 2s1 2 3 2 3-1 3-2-1-2-3-2z"/>
+                <path d="M18 22l-4-6M46 22l4-6"/>
+                <path d="M24 50l-2 6M40 50l2 6"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Mamíferos</h3>
+              <p>Jaguar, oso de anteojos, puma, tapir y ocelote: especies emblemáticas que habitan los bosques ecuatorianos.</p>
+            </div>
           </article>
 
           <article class="animal-card">
-            <div class="card-icon">🦅</div>
-            <h3>Aves</h3>
-            <p>Cóndor andino, águila harpía, tucanes, loros, colibríes y más de 200 especies de aves nativas.</p>
+            <div class="icon-box" aria-hidden="true">
+              <!-- Icono ave -->
+              <svg viewBox="0 0 64 64">
+                <path d="M10 40c10 4 20 4 30 0 6-2 10-6 14-12-4 0-8 2-12 4"/>
+                <path d="M20 38c-2 4-4 8-2 12 4-2 8-4 10-8"/>
+                <circle cx="44" cy="28" r="1.5" fill="#fff" stroke="none"/>
+                <path d="M48 30l6-2"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Aves</h3>
+              <p>Cóndor andino, águila harpía, tucanes, loros y colibríes: más de 200 especies nativas surcando los cielos.</p>
+            </div>
           </article>
 
           <article class="animal-card">
-            <div class="card-icon">🦎</div>
-            <h3>Reptiles</h3>
-            <p>Iguanas, boas constrictoras, tortugas gigantes de Galápagos y caimanes del Oriente.</p>
+            <div class="icon-box" aria-hidden="true">
+              <!-- Icono reptil (tortuga) -->
+              <svg viewBox="0 0 64 64">
+                <ellipse cx="32" cy="34" rx="18" ry="12"/>
+                <path d="M14 34c2-6 6-10 18-10s16 4 18 10"/>
+                <path d="M32 24v20M22 28l4 14M42 28l-4 14"/>
+                <circle cx="50" cy="28" r="4"/>
+                <path d="M14 38l-4 2M14 32l-4-2"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Reptiles</h3>
+              <p>Iguanas, boas constrictoras, tortugas gigantes de Galápagos y caimanes del Oriente ecuatoriano.</p>
+            </div>
           </article>
+
+          <article class="animal-card">
+            <div class="icon-box" aria-hidden="true">
+              <!-- Icono anfibio (rana) -->
+              <svg viewBox="0 0 64 64">
+                <path d="M16 36c0-8 7-14 16-14s16 6 16 14c0 6-4 10-10 10H26c-6 0-10-4-10-10z"/>
+                <circle cx="24" cy="28" r="3"/>
+                <circle cx="40" cy="28" r="3"/>
+                <path d="M28 40c1 2 3 3 4 3s3-1 4-3"/>
+                <path d="M14 44l-4 4 6-2M50 44l4 4-6-2"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Anfibios</h3>
+              <p>Ranas y salamandras de los bosques nublados, claves para los ecosistemas del Chocó y la Amazonía.</p>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- ========== CONSERVACIÓN (RF-06) ========== -->
+    <!-- ========== CONSERVACIÓN ========== -->
     <section id="conservacion" class="section section-dark">
       <div class="section-inner">
         <div class="section-header">
@@ -110,97 +172,96 @@
       </div>
     </section>
 
-    <!-- ========== GALERÍA (RF-03) ========== -->
+    <!-- ========== GALERÍA ========== -->
     <section id="galeria" class="section">
       <div class="section-inner">
         <div class="section-header">
           <span class="section-tag">Imágenes</span>
           <h2>Galería</h2>
+          <p class="section-desc">Haz clic en cualquier imagen para verla en grande.</p>
         </div>
 
         <div class="galeria-grid">
-          <figure class="galeria-item galeria-big">
-            <img src="img/cocodrilo.jpeg" alt="Cocodrilo">
-          </figure>
-          <figure class="galeria-item">
-            <img src="img/leon.jpeg" alt="León">
-          </figure>
-          <figure class="galeria-item">
-            <img src="img/mono arrana.jpeg" alt="Mono araña">
-          </figure>
-          <figure class="galeria-item">
-            <img src="img/monos.jpeg" alt="Monos">
-          </figure>
-          <figure class="galeria-item">
-            <img src="img/osos ormiueros.jpeg" alt="Osos hormigueros">
-          </figure>
-          <figure class="galeria-item galeria-wide">
-            <img src="img/puercos.jpeg" alt="Puercos">
-          </figure>
-          <figure class="galeria-item">
-            <img src="img/tortugas.jpeg" alt="Tortugas">
-          </figure>
-          <figure class="galeria-item">
-            <img src="img/WhatsApp Image 2026-05-10 at 3.59.21 AM.jpeg" alt="Animal del zoológico">
-          </figure>
+          <a href="#g1" class="galeria-item"><img src="img/cocodrilo.jpeg" alt="Cocodrilo"></a>
+          <a href="#g2" class="galeria-item"><img src="img/leon.jpeg" alt="León"></a>
+          <a href="#g3" class="galeria-item"><img src="img/mono arrana.jpeg" alt="Mono araña"></a>
+          <a href="#g4" class="galeria-item"><img src="img/monos.jpeg" alt="Monos"></a>
+          <a href="#g5" class="galeria-item"><img src="img/osos ormiueros.jpeg" alt="Oso hormiguero"></a>
+          <a href="#g6" class="galeria-item"><img src="img/puercos.jpeg" alt="Puercos"></a>
+          <a href="#g7" class="galeria-item"><img src="img/tortugas.jpeg" alt="Tortugas"></a>
+          <a href="#g8" class="galeria-item"><img src="img/WhatsApp Image 2026-05-10 at 3.59.21 AM.jpeg" alt="Animal del zoológico"></a>
         </div>
       </div>
+
+      <!-- Lightbox modals (CSS :target) -->
+      <div id="g1" class="galeria-modal"><a href="#galeria" class="galeria-close" aria-label="Cerrar"></a><img src="img/cocodrilo.jpeg" alt="Cocodrilo"></div>
+      <div id="g2" class="galeria-modal"><a href="#galeria" class="galeria-close" aria-label="Cerrar"></a><img src="img/leon.jpeg" alt="León"></div>
+      <div id="g3" class="galeria-modal"><a href="#galeria" class="galeria-close" aria-label="Cerrar"></a><img src="img/mono arrana.jpeg" alt="Mono araña"></div>
+      <div id="g4" class="galeria-modal"><a href="#galeria" class="galeria-close" aria-label="Cerrar"></a><img src="img/monos.jpeg" alt="Monos"></div>
+      <div id="g5" class="galeria-modal"><a href="#galeria" class="galeria-close" aria-label="Cerrar"></a><img src="img/osos ormiueros.jpeg" alt="Oso hormiguero"></div>
+      <div id="g6" class="galeria-modal"><a href="#galeria" class="galeria-close" aria-label="Cerrar"></a><img src="img/puercos.jpeg" alt="Puercos"></div>
+      <div id="g7" class="galeria-modal"><a href="#galeria" class="galeria-close" aria-label="Cerrar"></a><img src="img/tortugas.jpeg" alt="Tortugas"></div>
+      <div id="g8" class="galeria-modal"><a href="#galeria" class="galeria-close" aria-label="Cerrar"></a><img src="img/WhatsApp Image 2026-05-10 at 3.59.21 AM.jpeg" alt="Animal del zoológico"></div>
     </section>
 
-    <!-- ========== HORARIOS Y PRECIOS (RF-04) ========== -->
+    <!-- ========== HORARIOS Y PRECIOS ========== -->
     <section id="horarios" class="section section-dark">
       <div class="section-inner">
         <div class="section-header">
           <span class="section-tag">Información</span>
-          <h2>Horarios y Precios</h2>
+          <h2>Horarios y Tarifas</h2>
         </div>
 
-        <div class="horarios-wrap">
-          <div class="horario-box">
-            <p class="horario-label">Días de atención</p>
-            <p class="horario-valor">Martes a Domingo</p>
-            <p class="horario-label">Horario</p>
-            <p class="horario-valor">09:00 – 16:00</p>
-            <p class="horario-nota">⚠️ Cerrado los lunes</p>
+        <div class="horarios-card">
+          <h3 class="horarios-title">Horarios y tarifas</h3>
+
+          <div class="horarios-row">
+            <span>De martes a domingo</span>
+            <span class="price">9:00AM - 16:00PM</span>
+          </div>
+          <div class="horarios-row">
+            <span>Feriados (incluido lunes)</span>
+            <span class="price">9:00AM - 16:00PM</span>
           </div>
 
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Categoría</th>
-                  <th>Precio</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Adultos</td>
-                  <td class="precio">$7.00</td>
-                </tr>
-                <tr>
-                  <td>Niños (3–11 años)</td>
-                  <td class="precio">$5.00</td>
-                </tr>
-                <tr>
-                  <td>Tercera edad</td>
-                  <td class="precio">$3.50</td>
-                </tr>
-                <tr>
-                  <td>Estudiantes</td>
-                  <td class="precio">$4.50</td>
-                </tr>
-                <tr>
-                  <td>Menores de 3 años</td>
-                  <td class="precio gratis">Gratis</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="horarios-divider"></div>
+
+          <div class="horarios-row bold">
+            <span>Adultos</span>
+            <span class="price">$8</span>
           </div>
+          <div class="horarios-row bold">
+            <span>Niñas y niños (3-11 años)</span>
+            <span class="price">$6</span>
+          </div>
+          <div class="horarios-row bold">
+            <span>Adultos mayores</span>
+            <span class="price">$4</span>
+          </div>
+
+          <div class="horarios-divider"></div>
+
+          <div class="horarios-row">
+            <span>Escuelas <strong>fiscales</strong></span>
+            <span class="price">$3</span>
+          </div>
+          <div class="horarios-row">
+            <span>Escuelas <strong>particulares</strong></span>
+            <span class="price">$5</span>
+          </div>
+          <div class="horarios-row">
+            <span>Estudiantes <strong>secundaria (con carnet)</strong></span>
+            <span class="price">$5</span>
+          </div>
+
+          <p class="horarios-note">
+            <strong>Menores de 3 años y personas con discapacidad no pagan ingreso.</strong>
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- ========== EDUCACIÓN (RF-05) ========== -->
+    <!-- ========== EDUCACIÓN (2 COLUMNAS) ========== -->
     <section id="educativos" class="section">
       <div class="section-inner">
         <div class="section-header">
@@ -210,78 +271,149 @@
         </div>
 
         <div class="edu-grid">
+
           <article class="edu-card">
-            <div class="edu-icon">🏫</div>
+            <div class="edu-icon" aria-hidden="true">
+              <!-- Icono escuela -->
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3l10 5-10 5L2 8l10-5z"/>
+                <path d="M6 10v5c0 2 3 3 6 3s6-1 6-3v-5"/>
+                <path d="M22 8v6"/>
+              </svg>
+            </div>
             <h3>Visitas Escolares</h3>
             <p>Experiencias guiadas adaptadas al currículo escolar, para grupos de todas las edades.</p>
-            <button type="button" class="btn btn-outline">Solicitar información</button>
+            <a href="#contacto" class="btn btn-outline">Solicitar información</a>
           </article>
 
           <article class="edu-card">
-            <div class="edu-icon">🌿</div>
+            <div class="edu-icon" aria-hidden="true">
+              <!-- Icono hoja -->
+              <svg viewBox="0 0 24 24">
+                <path d="M5 19c0-9 7-15 16-15-1 9-7 15-16 15z"/>
+                <path d="M5 19c4-4 8-7 14-12"/>
+              </svg>
+            </div>
             <h3>Talleres Ambientales</h3>
             <p>Actividades prácticas sobre biodiversidad, conservación y ecosistemas ecuatorianos.</p>
-            <button type="button" class="btn btn-outline">Solicitar información</button>
+            <a href="#contacto" class="btn btn-outline">Solicitar información</a>
           </article>
 
           <article class="edu-card">
-            <div class="edu-icon">🔭</div>
+            <div class="edu-icon" aria-hidden="true">
+              <!-- Icono ciencia -->
+              <svg viewBox="0 0 24 24">
+                <path d="M9 3v6l-5 9c-1 2 0 4 2 4h12c2 0 3-2 2-4l-5-9V3"/>
+                <path d="M9 3h6"/>
+                <circle cx="12" cy="16" r="1.2" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
             <h3>Ciencia Joven</h3>
             <p>Programas de investigación y observación para jóvenes interesados en biología y ecología.</p>
-            <button type="button" class="btn btn-outline">Solicitar información</button>
+            <a href="#contacto" class="btn btn-outline">Solicitar información</a>
           </article>
+
+          <article class="edu-card">
+            <div class="edu-icon" aria-hidden="true">
+              <!-- Icono familia -->
+              <svg viewBox="0 0 24 24">
+                <circle cx="8" cy="8" r="3"/>
+                <circle cx="16" cy="8" r="3"/>
+                <path d="M2 20c0-4 3-6 6-6s6 2 6 6"/>
+                <path d="M10 20c0-4 3-6 6-6s6 2 6 6"/>
+              </svg>
+            </div>
+            <h3>Visitas en Familia</h3>
+            <p>Recorridos diseñados para familias, con actividades interactivas y didácticas para los más pequeños.</p>
+            <a href="#contacto" class="btn btn-outline">Solicitar información</a>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- ========== VIDEO (RF-07) ========== -->
+    <!-- ========== VIDEO INSTITUCIONAL ========== -->
     <section id="video" class="section section-dark">
       <div class="section-inner">
         <div class="section-header">
           <span class="section-tag">Institucional</span>
           <h2>Video Institucional</h2>
+          <p class="section-desc">Conoce nuestra labor en menos de tres minutos.</p>
         </div>
-        <div class="video-wrap">
+
+        <div class="video-stage">
+          <!-- Hojas decorativas arriba -->
+          <svg class="video-leaves leaf-l" viewBox="0 0 100 60" aria-hidden="true">
+            <path d="M5 50C20 10 60 5 95 15c-10 25-40 45-90 35z" fill="currentColor" opacity=".55"/>
+            <path d="M10 48c20-25 50-30 80-25" stroke="#0d2b0d" stroke-width="1.5" fill="none"/>
+          </svg>
+          <svg class="video-leaves leaf-r" viewBox="0 0 100 60" aria-hidden="true">
+            <path d="M5 50C20 10 60 5 95 15c-10 25-40 45-90 35z" fill="currentColor" opacity=".55"/>
+            <path d="M10 48c20-25 50-30 80-25" stroke="#0d2b0d" stroke-width="1.5" fill="none"/>
+          </svg>
+
+          <!-- Marco del video -->
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Video institucional del Zoológico de Quito"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <!-- Huellas tipo cartel sostenido -->
+          <svg class="video-paw paw-l" viewBox="0 0 64 64" aria-hidden="true">
+            <ellipse cx="32" cy="42" rx="14" ry="12" fill="currentColor"/>
+            <ellipse cx="18" cy="26" rx="6" ry="8" fill="currentColor"/>
+            <ellipse cx="32" cy="20" rx="6" ry="8" fill="currentColor"/>
+            <ellipse cx="46" cy="26" rx="6" ry="8" fill="currentColor"/>
+            <ellipse cx="10" cy="38" rx="5" ry="7" fill="currentColor"/>
+          </svg>
+          <svg class="video-paw paw-r" viewBox="0 0 64 64" aria-hidden="true">
+            <ellipse cx="32" cy="42" rx="14" ry="12" fill="currentColor"/>
+            <ellipse cx="18" cy="26" rx="6" ry="8" fill="currentColor"/>
+            <ellipse cx="32" cy="20" rx="6" ry="8" fill="currentColor"/>
+            <ellipse cx="46" cy="26" rx="6" ry="8" fill="currentColor"/>
+            <ellipse cx="10" cy="38" rx="5" ry="7" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== UBICACIÓN ========== -->
+    <section id="ubicacion" class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-tag">¿Cómo llegar?</span>
+          <h2>Ubicación</h2>
+          <p class="section-desc">📍 Av. Interoceánica · Guayllabamba, Quito – Ecuador</p>
+        </div>
+        <div class="map-wrap">
           <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Video institucional del Zoológico de Quito"
-            frameborder="0"
+            src="https://www.google.com/maps?q=Zool%C3%B3gico+de+Quito+Guayllabamba&output=embed"
+            title="Mapa del Zoológico de Quito en Guayllabamba"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
             allowfullscreen>
           </iframe>
         </div>
       </div>
     </section>
 
-    <!-- ========== UBICACIÓN (RF-09) ========== -->
-    <section id="ubicacion" class="section">
-      <div class="section-inner">
-        <div class="section-header">
-          <span class="section-tag">¿Cómo llegar?</span>
-          <h2>Ubicación</h2>
-          <p class="section-desc">📍 Guayllabamba, Quito – Ecuador</p>
-        </div>
-        <div class="map-wrap">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3990.9!2d-78.327!3d-0.043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMDDCsDAyJzM0LjgiUyA3OMKwMTknMzcuMiJX!5e0!3m2!1ses!2sec!4v1680000000000"
-            title="Mapa del Zoológico de Quito en Guayllabamba"
-            style="border:0;"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CONTACTO (RF-10) ========== -->
+    <!-- ========== CONTACTO ========== -->
     <section id="contacto" class="section section-dark">
-      <div class="section-inner">
+      <div class="section-inner contact-stage">
+
+        <img src="img/tortuga.jpg" alt="" class="contact-bg-img" aria-hidden="true">
+
         <div class="section-header">
           <span class="section-tag">Escríbenos</span>
           <h2>Contacto</h2>
           <p class="section-desc">Estamos para atenderte. Completa el formulario y te responderemos pronto.</p>
         </div>
 
-        <form action="guardar.php" method="POST" class="contact-form" novalidate>
+        <form action="guardar.php" method="POST" class="contact-form">
           <div class="form-row">
             <div class="form-group">
               <label for="nombre">Nombre completo</label>
@@ -329,16 +461,42 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="logo-icon">🦁</span>
-        <span class="logo-text">QuitoZoo</span>
+        <div class="brand-line">
+          <span class="logo-icon">🦁</span>
+          <span>QuitoZoo</span>
+        </div>
         <p>Zoológico de Quito – Guayllabamba, Ecuador</p>
       </div>
+
       <nav class="footer-social" aria-label="Redes sociales">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="Facebook">Facebook</a>
-        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 5.8.1 5 .3 4.2.6c-.8.3-1.5.7-2.2 1.4C1.3 2.7.9 3.4.6 4.2.3 5 .1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.1.6 2.9.3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.6.5 2.9.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.1-.3 2.9-.6.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.1-.6-2.9-.3-.8-.7-1.5-1.4-2.2C21.3 1.3 20.6.9 19.8.6 19 .3 18.2.1 16.9.1 15.7 0 15.3 0 12 0z"/>
+            <path d="M12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+            <circle cx="18.4" cy="5.6" r="1.4"/>
+          </svg>
+        </a>
+
+        <a href="#" aria-label="Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.4c0 .7.6 1.3 1.3 1.3h11.5v-9.3H9.7v-3.6h3.1V8.4c0-3.1 1.9-4.8 4.7-4.8 1.3 0 2.5.1 2.8.1v3.3h-1.9c-1.5 0-1.8.7-1.8 1.8V11h3.6l-.5 3.6h-3.1V24h6.1c.7 0 1.3-.6 1.3-1.3V1.3C24 .6 23.4 0 22.7 0z"/>
+          </svg>
+        </a>
+
+        <a href="#" aria-label="YouTube" title="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/>
+          </svg>
+        </a>
+
+        <a href="#" aria-label="TikTok" title="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19.6 5.8a5.5 5.5 0 0 1-3.4-1.2 5.5 5.5 0 0 1-2.1-3.6V.5h-3.7v14.6a3.3 3.3 0 1 1-2.4-3.2V8.1a7 7 0 1 0 6.1 6.9V8.5a9.1 9.1 0 0 0 5.5 1.8V6.6a5.5 5.5 0 0 1 0-.8z"/>
+          </svg>
+        </a>
       </nav>
-      <p class="footer-copy">© 2025 Zoológico de Quito. Todos los derechos reservados.</p>
+
+      <p class="footer-copy">© 2026 Zoológico de Quito. Todos los derechos reservados.</p>
     </div>
   </footer>
 
